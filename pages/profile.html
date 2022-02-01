@@ -372,11 +372,8 @@ body{
  // $('personal').click($('pp').hide());
  $(document).ready(function(){
 
-  $("#wrk").hide();
-  $("#sk").hide();
-  $("#std").hide();
-  $("#ex").hide();
-  $("#cur").hide();
+  $("#wrk,#sk,#std,#ex,#cur").hide();
+
 
 
 
@@ -384,53 +381,38 @@ body{
  });
 
  $("#personal").click(function(){
+  $("#wrk,#sk,#std,#ex,#cur").hide();
   $("#pers").show();
-  $("#wrk").hide();
-  $("#sk").hide();
-  $("#std").hide();
-  $("#ex").hide();
-  $("#cur").hide();
+
 
 
  });
 
  $("#skills").click(function(){
-  $("#pers").hide();
-  $("#wrk").hide();
+  $("#wrk,#pers,#std,#ex,#cur").hide();
   $("#sk").show();
-  $("#std").hide();
-  $("#ex").hide(); 
-  $("#cur").hide();
+
 
  });
 
  $("#experience").click(function(){
-  $("#pers").hide();
-  $("#wrk").hide();
-  $("#sk").hide();
-  $("#std").hide();
-  $("#ex").show(); 
-  $("#cur").hide();
+  $("#wrk,#pers,#std,#sk,#cur").hide();
+  $("#ex").show();
+
 
  });
 
  $("#study").click(function(){
-  $("#pers").hide();
-  $("#wrk").hide();
-  $("#sk").hide();
+  $("#wrk,#pers,#ex,#sk,#cur").hide();
   $("#std").show();
-  $("#ex").hide(); 
-  $("#cur").hide();
+
 
  });
 
  $("#courses").click(function(){
-  $("#pers").hide();
-  $("#wrk").hide();
-  $("#sk").hide();
-  $("#std").hide();
-  $("#ex").hide(); 
+  $("#wrk,#pers,#ex,#sk,#std").hide();
   $("#cur").show();
+ 
  });
 </script>
 
