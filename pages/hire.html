@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about</title>
+    <title>jobDetails</title>
     <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.css"/>
     <link rel="stylesheet" href="../css/style.css"/>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 <!-- Google Fonts -->
@@ -63,116 +64,140 @@
   </nav>
 
   <!--------------------------  end header ---------------------------->
-  
-<div class="container-fluid ">
-<div class="card mb-3" style="max-width: 540px;">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img
-          src="https://mdbcdn.b-cdn.net/wp-content/uploads/2020/06/vertical.webp"
-          alt="Trendy Pants and Shoes"
-          class="img-fluid rounded-start"
-        />
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            This is a wider card with supporting text below as a natural lead-in to
-            additional content. This content is a little bit longer.
-          </p>
-          <p class="card-text">
-            <small class="text-muted">Last updated 3 mins ago</small>
-          </p>
+<div class="container mt-5 ">
+
+            
+    <div class="card mb-3 bg-dark text-white border-warning" style="max-width: 100%;">
+        <div class="row g-0">
+          <div class="col-md-12">
+            <div class="card-body">
+              <h3 class="card-title">UX Desiner</h3>
+              <p>Google - (Rimotly)</p>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+
+              <ul>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, error.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, error.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, error.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, error.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, error.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, error.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, error.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, error.</li>
+              </ul>
+
+             <a style="text-decoration: none;" href="#"> <button class="btn btn-primary" >Apply</button> </a>
+              <p class="card-text"><small class="text-info">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
+
 
 </div>
 
+    <!--up btn-->
+
+    <div id="toTopBtn" class="btn rounded-pill" style="position: fixed; bottom: 100px; right: 50px; width: 20px; height:40px;  ">
+      ^
+    </div>
+    <script>
+      $(document).ready(function() {
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 50) {
+      $('#toTopBtn').fadeIn();
+    } else {
+      $('#toTopBtn').fadeOut();
+    }
+  });
+
+  $('#toTopBtn').click(function() {
+    $("html, body").animate({
+      scrollTop: 0
+    }, 1000);
+    return false;
+  });
+});
+    </script>
+    <!---%%%%%%%%%%%%%%%%%%%%%%-->
+
    
     <!------------ Footer --------------->
-<footer class="bg-dark text-center text-white mt-5" >
+<footer class="bg-dark text-center text-white mt-5">
    
   
-  <!-- Section: Form -->
-  <section class="">
-    <form action="">
-      <!--Grid row-->
-      <div class="row d-flex justify-content-center">
-        <!--Grid column-->
-        <div class="col-auto">
-          <p class="pt-2">
-            <strong>Sign up for our newsletter</strong>
-          </p>
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-md-5 col-5">
-          <!-- Email input -->
-          <div class="form-outline form-white mb-4">
-            <input type="email" id="form5Example21" class="form-control" placeholder="Email address" />
+    <!-- Section: Form -->
+    <section class="">
+      <form action="">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Sign up for our newsletter</strong>
+            </p>
           </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div class="form-outline form-white mb-4">
+              <input type="email" id="form5Example21" class="form-control" placeholder="Email address" />
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-auto">
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-outline-light mb-4">
+              Subscribe
+            </button>
+          </div>
+          <!--Grid column-->
         </div>
-        <!--Grid column-->
+        <!--Grid row-->
+      </form>
+    </section>
+    <!-- Section: Form -->
 
-        <!--Grid column-->
-        <div class="col-auto">
-          <!-- Submit button -->
-          <button type="submit" class="btn btn-outline-light mb-4">
-            Subscribe
-          </button>
-        </div>
-        <!--Grid column-->
-      </div>
-      <!--Grid row-->
-    </form>
-  </section>
-  <!-- Section: Form -->
-
-  <!-- Section: Text -->
-  <section class="mb-4">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-    </p>
-  </section>
-  <!-- Section: Text -->
-
-  <!-- Section: Links -->
-  <section class="">
-    <!--Grid row-->
-    <div class="row">
-     <!-- Grid container -->
-<div class="container p-4">
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+      </p>
+    </section>
+    <!-- Section: Text -->
+ <!-- Grid container -->
+ <div class="container p-4">
   <!-- Section: Social media -->
   <section class="mb-4">
     <!-- Facebook -->
     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
       ><i class="fab fa-facebook-f"></i
     ></a>
-  
+
     <!-- Twitter -->
     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
       ><i class="fab fa-twitter"></i
     ></a>
-  
+
     <!-- Google -->
     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
       ><i class="fab fa-google"></i
     ></a>
-  
+
     <!-- Instagram -->
     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
       ><i class="fab fa-instagram"></i
     ></a>
-  
+
     <!-- Linkedin -->
     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
       ><i class="fab fa-linkedin-in"></i
     ></a>
-  
+
     <!-- Github -->
     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
       ><i class="fab fa-github"></i
@@ -180,20 +205,25 @@
   </section>
   
   <!-- Section: Social media -->
+    <!-- Section: Links -->
+    <section class="">
+      <!--Grid row-->
+      <div class="row">
+       
 
-    </div>
-    <!--Grid row-->
-  </section>
-  <!-- Section: Links -->
-</div>
-<!-- Grid container -->
+      </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+  </div>
+  <!-- Grid container -->
 
-<!-- Copyright -->
-<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-  © 2022 Copyright:
-  <a class="text-white" href="#">Ali Alroainy</a>
-</div>
-<!-- Copyright -->
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2022 Copyright:
+    <a class="text-white" href="#">Ali Alroainy</a>
+  </div>
+  <!-- Copyright -->
 </footer>
 <!-- Footer -->
 
