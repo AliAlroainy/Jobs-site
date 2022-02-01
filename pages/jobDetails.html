@@ -93,6 +93,31 @@
 
 </div>
 
+    <!--up btn-->
+
+    <div id="toTopBtn" class="btn rounded-pill" style="position: fixed; bottom: 100px; right: 50px; width: 20px; height:40px;  ">
+      ^
+    </div>
+    <script>
+      $(document).ready(function() {
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 50) {
+      $('#toTopBtn').fadeIn();
+    } else {
+      $('#toTopBtn').fadeOut();
+    }
+  });
+
+  $('#toTopBtn').click(function() {
+    $("html, body").animate({
+      scrollTop: 0
+    }, 1000);
+    return false;
+  });
+});
+    </script>
+    <!---%%%%%%%%%%%%%%%%%%%%%%-->
+
         <!-- Footer ------------------------------------------->
 <footer class="bg-dark text-center text-white">
     <!-- Grid container -->
