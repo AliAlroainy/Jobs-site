@@ -75,7 +75,7 @@
           <legend style="color: #ffeba7;" class="p-2">Personalia:</legend>
 
           <div class="col-12 m-2" >
-            <input type="text" class="form-control border-right" placeholder="Skills, Designation, Companies">
+            <input type="text" id="myInput" class="form-control border-right" placeholder="Skills, Designation, Companies">
           </div>
 
 
@@ -114,6 +114,20 @@
     </div>
             <!-- end search form-->
 
+
+
+            <script>
+            $(document).ready(function() {
+    $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+
+      $("#my-list > li").show().filter(function() {                           //Select all li and show
+        return $(this).find('h6').text().toLowerCase().indexOf(value) === -1;  //Find the h6 and check if the value is substring of the text. Return true if not found.
+      }).hide();                                                          //Hide all li that that the value is not the substring of text
+    });
+  });
+              </script>
+
       <!--ffffffff-->
  
 <div class="container-fluid ">
@@ -126,51 +140,65 @@
             <div class="row  col-lg-8 ">
     
                 <div class=" p-2"><h3 style="color: #ffeba7;">The last jobs</h3></div>
-    
-                <div class="card mb-3 bg-dark text-white border-warning" style="max-width: 100%;">
-                    <div class="row g-0">
-                     
-                      <div class="col-md-12">
-                        <div class="card-body">
-                          <h5 class="card-title">UX Desiner</h5>
-                          <p>Google - (Rimotly)</p>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                         <a style="text-decoration: none;" href="jobDetails.html"> <button class="btn btn-primary" >details</button> </a>
-                          <p class="card-text"><small class="text-info">Last updated 3 mins ago</small></p>
+
+                <ul id="my-list">
+                  <li>
+                    <div class="card mb-3 bg-dark text-white border-warning" style="max-width: 100%;">
+                      <div class="row g-0">
+                       
+                        <div class="col-md-12">
+                          <div class="card-body">
+                            <h5 class="card-title">UX Desiner</h5>
+                            <p>Google - (Rimotly)</p>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                           <a style="text-decoration: none;" href="jobDetails.html"> <button class="btn btn-primary" >details</button> </a>
+                            <p class="card-text"><small class="text-info">Last updated 3 mins ago</small></p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-    
-                  <div class="card mb-3 bg-dark text-white border-warning" style="max-width: 100%;">
-                    <div class="row g-0">
-                     
-                      <div class="col-md-12">
-                        <div class="card-body">
-                          <h5 class="card-title">UX Desiner</h5>
-                          <p>Google - (Rimotly)</p>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                         <a style="text-decoration: none;" href="jobDetails.html"> <button class="btn btn-primary" >details</button> </a>
-                          <p class="card-text"><small class="text-info">Last updated 3 mins ago</small></p>
+      
+                  </li>
+
+                  <li>
+                    <div class="card mb-3 bg-dark text-white border-warning" style="max-width: 100%;">
+                      <div class="row g-0">
+                       
+                        <div class="col-md-12">
+                          <div class="card-body">
+                            <h5 class="card-title">UX Desiner</h5>
+                            <p>Google - (Rimotly)</p>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                           <a style="text-decoration: none;" href="jobDetails.html"> <button class="btn btn-primary" >details</button> </a>
+                            <p class="card-text"><small class="text-info">Last updated 3 mins ago</small></p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-    
-                  <div class="card mb-3 bg-dark text-white border-warning" style="max-width: 100%;">
-                    <div class="row g-0">
-                     
-                      <div class="col-md-12">
-                        <div class="card-body">
-                          <h5 class="card-title">UX Desiner</h5>
-                          <p>Google - (Rimotly)</p>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                         <a style="text-decoration: none;" href="jobDetails.html"> <button class="btn btn-primary" >details</button> </a>
-                          <p class="card-text"><small class="text-info">Last updated 3 mins ago</small></p>
+                  </li>
+
+                  <li>
+                    <div class="card mb-3 bg-dark text-white border-warning" style="max-width: 100%;">
+                      <div class="row g-0">
+                       
+                        <div class="col-md-12">
+                          <div class="card-body">
+                            <h5 class="card-title">UX Desiner</h5>
+                            <p>Google - (Rimotly)</p>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                           <a style="text-decoration: none;" href="jobDetails.html"> <button class="btn btn-primary" >details</button> </a>
+                            <p class="card-text"><small class="text-info">Last updated 3 mins ago</small></p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </li>
+                </ul>
+    
+                
+                  
+    
+                 
     
             </div>
     
