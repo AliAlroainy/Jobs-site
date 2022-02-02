@@ -17,50 +17,55 @@
 </head>
 <body class=" bg-dark">
  
-    <!--------------------------  start header ---------------------------->
+  <!--------------------------  start header ---------------------------->
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container">
-          <a class="navbar-brand  fw-bold" href="../index.html" style="color: #ffeba7;">workTime</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <div class="container">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-           
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="jobs.html">jobs</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="about.html">about us</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="contact.html">contact</a>
-                    </li>
-                 
-                  </ul>
-              </div>
-          
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top ">
+    <div class="container">
+      <a class="navbar-brand  fw-bold" href="../index.html" style="color: #ffeba7;">workTime</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="container">
-              <form class="d-flex" style="position: relative;">
-            <input style="color: #ffeba7;" class="form-control me-2 bg-dark rounded-pill w-100 " type="search" placeholder="Search" aria-label="Search">
-            <button style="position: absolute; right: 10px; width: 30px; height: 35px; top: 1.4px; background-color: transparent; border: none;" class=" rounded-pill" type="submit"><i style="color: #ffeba7;" class="fa fa-search"></i></button>
-          </form>
-        </div>
-            
-            <div class="nav-item"> 
-                <a class="nav-link btn " href="singin.html" style="text-decoration: none;  ">Login</a>
-            </div>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+       
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="jobs.html">jobs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="hire.html">hire</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">about</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="services.html">services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">contact</a>
+                </li>
+             
+              </ul>
           </div>
+      
+      <div class="container">
+          <form class="d-flex" style="position: relative;">
+        <input style="color: #ffeba7;" class="form-control bg-dark rounded-pill w-100 " type="search" placeholder="Search" aria-label="Search">
+        <button style="position: absolute; right: 10px; width: 30px; height: 35px; top: 1.4px; background-color: transparent; border: none;" class=" rounded-pill" type="submit"><i style="color: #ffeba7;" class="fa fa-search"></i></button>
+      </form>
+    </div>
+        
+        <div class="nav-item m-3 "> 
+            <a class="nav-link btn " href="singin.html" style="text-decoration: none;  ">Login</a>
         </div>
-      </nav>
+      </div>
+    </div>
+  </nav>
 
-      <!--------------------------  end header ---------------------------->
-
+  <!--------------------------  end header ---------------------------->
 
       <!-- search form-->
       <div class="col-12 container mt-5 ">
@@ -70,12 +75,12 @@
           <legend style="color: #ffeba7;" class="p-2">Personalia:</legend>
 
           <div class="col-12 m-2" >
-            <input type="text" class="form-control border-right" placeholder="Skills, Designation, Companies">
+            <input type="text" id="myInput" class="form-control border-right" placeholder="Skills, Designation, Companies">
           </div>
 
 
           <div class="input-group m-2 col-12">
-            <select class="form-select  border-right">
+            <select  class="form-select  border-right">
               <option>Experience</option>
               <option>0 Year</option>
               <option>1 Year</option>
@@ -84,22 +89,44 @@
       
             </select>
 
-            <select class=" form-select">
+            <select  class=" form-select">
               <option>Select Category</option>
               <option>Accounf &amp; Finance</option>
               <option>Information &amp; Technology</option>
               <option>Marketing</option>
               <option>Food &amp; Restaurent</option>
             </select>
+
+            <select  class=" form-select">
+              <option>Select Type</option>
+              <option>Rimotly</option>
+              <option>Intership</option>
+              <option>Part-Time</option>
+              <option>Full-Time</option>
+            </select>
          
      
-            <input type="submit" class="btn seub-btn" value="submit">
+            <input type="submit" class="btn seub-btn" value="Search">
   
         </div>
         </fieldset>
       </form>
     </div>
             <!-- end search form-->
+
+
+
+            <script>
+            $(document).ready(function() {
+    $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+
+      $("#my-list > li").show().filter(function() {                           //Select all li and show
+        return $(this).find('h5').text().toLowerCase().indexOf(value) === -1;  //Find the h6 and check if the value is substring of the text. Return true if not found.
+      }).hide();                                                          //Hide all li that that the value is not the substring of text
+    });
+  });
+              </script>
 
       <!--ffffffff-->
  
@@ -113,66 +140,68 @@
             <div class="row  col-lg-8 ">
     
                 <div class=" p-2"><h3 style="color: #ffeba7;">The last jobs</h3></div>
-    
-                <div class="card mb-3 bg-dark text-white border-warning" style="max-width: 100%;">
-                    <div class="row g-0">
-                     
-                      <div class="col-md-12">
-                        <div class="card-body">
-                          <h5 class="card-title">UX Desiner</h5>
-                          <p>Google - (Rimotly)</p>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                         <a style="text-decoration: none;" href="jobDetails.html"> <button class="btn btn-primary" >details</button> </a>
-                          <p class="card-text"><small class="text-info">Last updated 3 mins ago</small></p>
+
+                <ul id="my-list">
+                  <li>
+                    <div class="card mb-3 bg-dark text-white border-warning" style="max-width: 100%;">
+                      <div class="row g-0">
+                       
+                        <div class="col-md-12">
+                          <div class="card-body">
+                            <h5 class="card-title">UX Desiner</h5>
+                            <p>Google - (Rimotly)</p>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                           <a style="text-decoration: none;" href="jobDetails.html"> <button class="btn btn-primary" >details</button> </a>
+                            <p class="card-text"><small class="text-info">Last updated 3 mins ago</small></p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-    
-                  <div class="card mb-3 bg-dark text-white border-warning" style="max-width: 100%;">
-                    <div class="row g-0">
-                     
-                      <div class="col-md-12">
-                        <div class="card-body">
-                          <h5 class="card-title">UX Desiner</h5>
-                          <p>Google - (Rimotly)</p>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                         <a style="text-decoration: none;" href="jobDetails.html"> <button class="btn btn-primary" >details</button> </a>
-                          <p class="card-text"><small class="text-info">Last updated 3 mins ago</small></p>
+      
+                  </li>
+
+                  <li>
+                    <div class="card mb-3 bg-dark text-white border-warning" style="max-width: 100%;">
+                      <div class="row g-0">
+                       
+                        <div class="col-md-12">
+                          <div class="card-body">
+                            <h5 class="card-title">Programmer</h5>
+                            <p>Google - (Full-Time)</p>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                           <a style="text-decoration: none;" href="jobDetails.html"> <button class="btn btn-primary" >details</button> </a>
+                            <p class="card-text"><small class="text-info">Last updated 3 mins ago</small></p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-    
-                  <div class="card mb-3 bg-dark text-white border-warning" style="max-width: 100%;">
-                    <div class="row g-0">
-                     
-                      <div class="col-md-12">
-                        <div class="card-body">
-                          <h5 class="card-title">UX Desiner</h5>
-                          <p>Google - (Rimotly)</p>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                         <a style="text-decoration: none;" href="jobDetails.html"> <button class="btn btn-primary" >details</button> </a>
-                          <p class="card-text"><small class="text-info">Last updated 3 mins ago</small></p>
+                  </li>
+
+                  <li>
+                    <div class="card mb-3 bg-dark text-white border-warning" style="max-width: 100%;">
+                      <div class="row g-0">
+                       
+                        <div class="col-md-12">
+                          <div class="card-body">
+                            <h5 class="card-title">UX Desiner</h5>
+                            <p>Google - (Rimotly)</p>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                           <a style="text-decoration: none;" href="jobDetails.html"> <button class="btn btn-primary" >details</button> </a>
+                            <p class="card-text"><small class="text-info">Last updated 3 mins ago</small></p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </li>
+                </ul>
     
-            </div>
-    
-            <div class="row col-lg-4">
-                <div>
-                <div class="text-info p-3  "><h3>Ads</h3></div>
-                <div class="card bg-dark text-white" style="width: 100%; height: 90%;">
-                    <img src="../assetes/4s.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                  </div>
-                </div>
+                
                   
+    
+                 
+    
             </div>
+    
     
         </div>
     
@@ -208,193 +237,82 @@
     </script>
     <!---%%%%%%%%%%%%%%%%%%%%%%-->
 
-        <!-- Footer ------------------------------------------->
-<footer class="bg-dark text-center text-white">
-    <!-- Grid container -->
-    <div class="container p-4">
-      <!-- Section: Social media -->
-      <section class="mb-4">
-        <!-- Facebook -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-facebook-f"></i
-        ></a>
   
-        <!-- Twitter -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-twitter"></i
-        ></a>
-  
-        <!-- Google -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-google"></i
-        ></a>
-  
-        <!-- Instagram -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-instagram"></i
-        ></a>
-  
-        <!-- Linkedin -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-linkedin-in"></i
-        ></a>
-  
-        <!-- Github -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-github"></i
-        ></a>
-      </section>
-      <!-- Section: Social media -->
-  
-      <!-- Section: Form -->
-      <section class="">
-        <form action="">
-          <!--Grid row-->
-          <div class="row d-flex justify-content-center">
-            <!--Grid column-->
-            <div class="col-auto">
-              <p class="pt-2">
-                <strong>Sign up for our newsletter</strong>
-              </p>
-            </div>
-            <!--Grid column-->
-  
-            <!--Grid column-->
-            <div class="col-md-5 col-12">
-              <!-- Email input -->
-              <div class="form-outline form-white mb-4">
-                <input type="email" id="form5Example21" class="form-control" />
-                <label class="form-label" for="form5Example21">Email address</label>
-              </div>
-            </div>
-            <!--Grid column-->
-  
-            <!--Grid column-->
-            <div class="col-auto">
-              <!-- Submit button -->
-              <button type="submit" class="btn btn-outline-light mb-4">
-                Subscribe
-              </button>
-            </div>
-            <!--Grid column-->
-          </div>
-          <!--Grid row-->
-        </form>
-      </section>
-      <!-- Section: Form -->
-  
-      <!-- Section: Text -->
-      <section class="mb-4">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-          repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-          eum harum corrupti dicta, aliquam sequi voluptate quas.
-        </p>
-      </section>
-      <!-- Section: Text -->
-  
-      <!-- Section: Links -->
-      <section class="">
-        <!--Grid row-->
-        <div class="row">
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-white">Link 1</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 2</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 3</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 4</a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-  
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-white">Link 1</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 2</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 3</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 4</a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-  
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-white">Link 1</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 2</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 3</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 4</a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-  
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-white">Link 1</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 2</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 3</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 4</a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-        </div>
-        <!--Grid row-->
-      </section>
-      <!-- Section: Links -->
-    </div>
-    <!-- Grid container -->
-  
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2020 Copyright:
-      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
-  </footer>
-  <!-- Footer -->
+<!------------ Footer --------------->
+<footer class="bg-dark text-center text-white mt-5">
+   
+  <!-- Section: Form -->
+<div class="d-flex align-items-center justify-content-center w-100">
+ 
+    <form class=" col-sm-9 col-lg-6 col-md-8  ">
+      
+      <div >Sign up for our newsletter   </div>
+    <input type="email" id="form5Example21" class="form-control " placeholder=" your Email address" />
+    <button type="submit" class="btn btn-outline-light m-3 ">
+      Subscribe
+    </button>
+  </form>
+ 
+</div>
+
+  <!-- Section: Text -->
+  <section class="mb-4">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+    </p>
+  </section>
+  <!-- Section: Text -->
+<!-- Grid container -->
+<div class="container p-4">
+<!-- Section: Social media -->
+<section class="mb-4">
+  <!-- Facebook -->
+  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+    ><i class="fab fa-facebook-f"></i
+  ></a>
+
+  <!-- Twitter -->
+  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+    ><i class="fab fa-twitter"></i
+  ></a>
+
+  <!-- Google -->
+  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+    ><i class="fab fa-google"></i
+  ></a>
+
+  <!-- Instagram -->
+  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+    ><i class="fab fa-instagram"></i
+  ></a>
+
+  <!-- Linkedin -->
+  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+    ><i class="fab fa-linkedin-in"></i
+  ></a>
+
+  <!-- Github -->
+  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+    ><i class="fab fa-github"></i
+  ></a>
+</section>
+
+<!-- Section: Social media -->
+  <!-- Section: Links -->
+ 
+  <!-- Section: Links -->
+</div>
+<!-- Grid container -->
+
+<!-- Copyright -->
+<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+  © 2022 Copyright:
+  <a class="text-white" href="https://github.com/AliAlroainy">Ali Alroainy</a>
+</div>
+<!-- Copyright -->
+</footer>
+<!-- Footer -->
+
 
 
         <!--script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

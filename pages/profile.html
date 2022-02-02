@@ -100,11 +100,15 @@ body{
       
             <!-- Breadcrumb -->
             <nav aria-label="breadcrumb" class="main-breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                <li class="breadcrumb-item"><a href="javascript:void(0)">User</a></li>
+              <ol class="breadcrumb" >
+                <li class="breadcrumb-item"><a style="text-decoration: none; color: #ffeba7;" href="../index.html">Home</a></li>
+                <li class="breadcrumb-item"><a style="text-decoration: none; color: #ffeba7;" href="javascript:void(0)">User</a></li>
+                <li class="breadcrumb-item"><a style="text-decoration: none; color: #ffeba7;" href="hire.html">OtherUsers</a></li>
+
                 <li class="breadcrumb-item active" aria-current="page">User Profile</li>
+        
               </ol>
+              
             </nav>
             <!-- /Breadcrumb -->
       
@@ -115,10 +119,10 @@ body{
                     <div class="d-flex flex-column align-items-center text-center">
                       <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
                       <div class="mt-3">
-                        <h4>John Doe</h4>
+                        <h4>Ali Alroainy</h4>
                         <p class="text-secondary mb-1">Full Stack Developer</p>
                         <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
-                        <button class="btn btn-primary">Follow</button>
+                        <button class="btn btn-primary">DownLoad CV</button>
                         <button class="btn btn-outline-primary">Message</button>
                       </div>
                     </div>
@@ -141,6 +145,9 @@ body{
                     <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap" id="courses" style="cursor: pointer;">
                       <h6 class="mb-0">courses</h6>
                     </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap"  style="cursor: pointer;">
+                      <a style="text-decoration: none; color:#222; " href="singin.html"><h6 class="mb-0 ">logout</h6></a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -153,7 +160,7 @@ body{
                         <h6 class="mb-0">Full Name</h6>
                       </div>
                       <div class="col-sm-9 text-secondary">
-                        Kenneth Valdez
+                        Ali Alroainy
                       </div>
                     </div>
                     <hr>
@@ -162,7 +169,7 @@ body{
                         <h6 class="mb-0">Email</h6>
                       </div>
                       <div class="col-sm-9 text-secondary">
-                        fip@jukmuh.al
+                        ali@jukmuh.al
                       </div>
                     </div>
                     <hr>
@@ -195,13 +202,71 @@ body{
                     <hr>
                     <div class="row">
                       <div class="col-sm-12">
-                        <a class="btn btn-info " target="__blank" href="#">Edit</a>
+                        <a class="btn btn-info " target="__blank" id="Edit" href="#">Edit</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                
+              <div class="col-md-8" >
+                <div class="card mb-3">
+                  <div class="card-body" id="Edpers">
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <h6 class="mb-0">Full Name</h6>
+                      </div>
+                      <div class="col-sm-9 ">
+                        <input type="text" class="form-control" >
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <h6 class="mb-0">Email</h6>
+                      </div>
+                      <div class="col-sm-9 text-secondary">
+                        <input type="email" class="form-control" >
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <h6 class="mb-0">Phone</h6>
+                      </div>
+                      <div class="col-sm-9 text-secondary">
+                        <input type="text" class="form-control" >
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <h6 class="mb-0">Mobile</h6>
+                      </div>
+                      <div class="col-sm-9 text-secondary">
+                        <input type="text" class="form-control" >
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <h6 class="mb-0">Address</h6>
+                      </div>
+                      <div class="col-sm-9 text-secondary">
+                        <input type="text" class="form-control" >
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <a class="btn btn-info " target="__blank" id="saveEd" href="#">save</a>
                       </div>
                     </div>
                   </div>
                 </div>
   
-                <div class="row gutters-sm" id="sk">
+                <div class="row gutters-sm mt-0" id="sk">
                   <div class="col-md-12 mb-3">
                     <div class="card h-100">
                       <div class="card-body">
@@ -225,6 +290,17 @@ body{
                         <small>Backend API</small>
                         <div class="progress mb-3" style="height: 5px">
                           <div class="progress-bar bg-primary" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                          <div>Delete</div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <a class="btn btn-info " target="__blank" href="#">Edit</a>
+
+                            <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  add
+</button>
+                        </div>
                         </div>
                       </div>
                     </div>
@@ -256,6 +332,15 @@ body{
                           <div class="progress mb-3" style="height: 5px">
                             <div class="progress-bar bg-primary" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
                           </div>
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <a class="btn btn-info " target="__blank" href="#">Edit</a>
+                              <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  add
+</button>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -286,6 +371,15 @@ body{
                             <div class="progress mb-3" style="height: 5px">
                               <div class="progress-bar bg-primary" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
+                            <div class="row">
+                              <div class="col-sm-12">
+                                <a class="btn btn-info " target="__blank" href="#">Edit</a>
+                                <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  add
+</button>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -296,25 +390,37 @@ body{
                           <div class="card h-100">
                             <div class="card-body">
                               <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">Experience</i></h6>
-                              <small>Web Design</small>
-                              <div class="progress mb-3" style="height: 5px">
-                                <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                              <small>Web Designer</small>
+                              <div class="progress mb-3" style="height: 20px">
+                                <small>2022</small>
                               </div>
-                              <small>Website Markup</small>
-                              <div class="progress mb-3" style="height: 5px">
-                                <div class="progress-bar bg-primary" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                              <small>Web Designer</small>
+                              <div class="progress mb-3" style="height: 20px">
+                                <small>2022</small>
                               </div>
-                              <small>One Page</small>
-                              <div class="progress mb-3" style="height: 5px">
-                                <div class="progress-bar bg-primary" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+                              <div id="ittem">  
+                              <small >Web Designer</small>
+                              <div class=" mb-5" style="height: 20px">
+                               <div><small>2022</small></div> 
+                              
+                                <div id="dlt" class="d-flex align-items-center justify-content-center text-white bg-dark rounded-3 " style="width: 20px; height: 20px; cursor: pointer;"> - </div>
                               </div>
-                              <small>Mobile Template</small>
-                              <div class="progress mb-3" style="height: 5px">
-                                <div class="progress-bar bg-primary" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                              <small>Backend API</small>
-                              <div class="progress mb-3" style="height: 5px">
-                                <div class="progress-bar bg-primary" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                              <script>
+                                $('#dlt').click(function(){
+                                  $('#ittem').hide();
+                                })
+                              </script>
+                             
+    
+                              <div class="row">
+                                <div class="col-sm-12">
+                                  <a class="btn btn-info " target="__blank" href="#">Edit</a>
+                                  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  add
+</button>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -327,25 +433,25 @@ body{
                           <div class="card h-100">
                             <div class="card-body">
                               <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">courses</i></h6>
-                              <small>Web Design</small>
-                              <div class="progress mb-3" style="height: 5px">
-                                <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                              <small>Website Markup</small>
-                              <div class="progress mb-3" style="height: 5px">
-                                <div class="progress-bar bg-primary" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                              <small>One Page</small>
-                              <div class="progress mb-3" style="height: 5px">
-                                <div class="progress-bar bg-primary" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                              <small>Mobile Template</small>
-                              <div class="progress mb-3" style="height: 5px">
-                                <div class="progress-bar bg-primary" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                              <small>Backend API</small>
-                              <div class="progress mb-3" style="height: 5px">
-                                <div class="progress-bar bg-primary" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                              <ul class="ul">
+                                <li class="li">javaScript</li>
+                                <li class="li">PHP</li>
+                                <li class="li">Sass</li>
+                                <li class="li">TnserflowJS</li>
+                                <li class="li">ReactJS</li>
+
+
+                              </ul>
+                             
+                              <div class="row">
+                                <div class="col-sm-12">
+                                  <a class="btn btn-info " target="__blank" href="#">Edit</a>
+                                  
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  add
+</button>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -373,50 +479,77 @@ body{
 
 
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
 
 <script>
  // $('personal').click($('pp').hide());
  $(document).ready(function(){
 
-  $("#wrk,#sk,#std,#ex,#cur").hide();
-
-
-
+  $("#wrk,#sk,#std,#ex,#cur,#Edpers").hide();
 
   
  });
 
  $("#personal").click(function(){
-  $("#wrk,#sk,#std,#ex,#cur").hide();
+  $("#wrk,#sk,#std,#ex,#cur,#Edpers").hide();
   $("#pers").show();
 
 
 
  });
 
+
+ $("#Edit").click(function(){
+  $("#wrk,#sk,#std,#ex,#cur,#Edpers,#pers").hide();
+  $("#Edpers").show();
+ });
+
+ $("#saveEd").click(function(){
+  $("#wrk,#sk,#std,#ex,#cur,#Edpers,#Edpers").hide();
+  $("#pers").show();
+ });
+
  $("#skills").click(function(){
-  $("#wrk,#pers,#std,#ex,#cur").hide();
+  $("#wrk,#pers,#std,#ex,#cur,#Edpers").hide();
   $("#sk").show();
 
 
  });
 
  $("#experience").click(function(){
-  $("#wrk,#pers,#std,#sk,#cur").hide();
+  $("#wrk,#pers,#std,#sk,#cur,#Edpers").hide();
   $("#ex").show();
 
 
  });
 
  $("#study").click(function(){
-  $("#wrk,#pers,#ex,#sk,#cur").hide();
+  $("#wrk,#pers,#ex,#sk,#cur,#Edpers").hide();
   $("#std").show();
 
 
  });
 
  $("#courses").click(function(){
-  $("#wrk,#pers,#ex,#sk,#std").hide();
+  $("#wrk,#pers,#ex,#sk,#std,#Edpers").hide();
   $("#cur").show();
  
  });
@@ -433,196 +566,8 @@ body{
 
 
 
-        <!-- Footer ------------------------------------------->
-<footer class="bg-dark text-center text-white">
-    <!-- Grid container -->
-    <div class="container p-4">
-      <!-- Section: Social media -->
-      <section class="mb-4">
-        <!-- Facebook -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-facebook-f"></i
-        ></a>
-  
-        <!-- Twitter -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-twitter"></i
-        ></a>
-  
-        <!-- Google -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-google"></i
-        ></a>
-  
-        <!-- Instagram -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-instagram"></i
-        ></a>
-  
-        <!-- Linkedin -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-linkedin-in"></i
-        ></a>
-  
-        <!-- Github -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-github"></i
-        ></a>
-      </section>
-      <!-- Section: Social media -->
-  
-      <!-- Section: Form -->
-      <section class="">
-        <form action="">
-          <!--Grid row-->
-          <div class="row d-flex justify-content-center">
-            <!--Grid column-->
-            <div class="col-auto">
-              <p class="pt-2">
-                <strong>Sign up for our newsletter</strong>
-              </p>
-            </div>
-            <!--Grid column-->
-  
-            <!--Grid column-->
-            <div class="col-md-5 col-12">
-              <!-- Email input -->
-              <div class="form-outline form-white mb-4">
-                <input type="email" id="form5Example21" class="form-control" />
-                <label class="form-label" for="form5Example21">Email address</label>
-              </div>
-            </div>
-            <!--Grid column-->
-  
-            <!--Grid column-->
-            <div class="col-auto">
-              <!-- Submit button -->
-              <button type="submit" class="btn btn-outline-light mb-4">
-                Subscribe
-              </button>
-            </div>
-            <!--Grid column-->
-          </div>
-          <!--Grid row-->
-        </form>
-      </section>
-      <!-- Section: Form -->
-  
-      <!-- Section: Text -->
-      <section class="mb-4">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-          repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-          eum harum corrupti dicta, aliquam sequi voluptate quas.
-        </p>
-      </section>
-      <!-- Section: Text -->
-  
-      <!-- Section: Links -->
-      <section class="">
-        <!--Grid row-->
-        <div class="row">
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-white">Link 1</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 2</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 3</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 4</a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-  
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-white">Link 1</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 2</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 3</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 4</a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-  
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-white">Link 1</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 2</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 3</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 4</a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-  
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-white">Link 1</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 2</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 3</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 4</a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-        </div>
-        <!--Grid row-->
-      </section>
-      <!-- Section: Links -->
-    </div>
-    <!-- Grid container -->
-  
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2020 Copyright:
-      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
-  </footer>
-  <!-- Footer -->
 
-
-        <!--script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <!--script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script-->
     <script src="../bootstrap-5.1.3-dist/js/bootstrap.bundle.js"></script>
 </body>
